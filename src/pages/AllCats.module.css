@@ -1,0 +1,48 @@
+
+.catsgallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.catcard {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.catimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.heartIcon {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;  
+    width: 48px;   
+    height: 48px; 
+    opacity: 0;    
+    transition: opacity 0.3s ease; 
+}
+.catcard:hover .catimage {
+    transform: scale(1.05); 
+}
+
+.catcard:hover .heartIcon {
+    opacity: 1; 
+}
+.catcard:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+}
+.load {
+    display: flex;
+    justify-content: center; 
+    font-size: 14px;
+    color: #000000; 
+    font-weight: 400;
+}

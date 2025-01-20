@@ -1,10 +1,10 @@
 
-import styles from "./Navbar.module.css";
+import styles from "./Header.module.css";
 import { Link, useLocation } from "react-router-dom";
 import catStore from "../store/CatsStore";
 import { useEffect } from "react";
 import { observer } from "mobx-react";
-const Navbar = observer(() => {
+const Header = observer(() => {
     const { setActivePage } = catStore;
     const location = useLocation();
     useEffect(() => {
@@ -31,4 +31,4 @@ const Navbar = observer(() => {
         </div>
     );
 });
-export default Navbar;
+export default Header;
